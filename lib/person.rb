@@ -1,9 +1,9 @@
 class Person
-  attr_reader :name, :at
+  attr_reader :name
+  attr_accessor :at
 
-  def initialize(name,at="Ochanomizu",money=0)
+  def initialize(name,money=0)
     @name = name
-    @at = at
     @money = money
   end
 
@@ -15,4 +15,10 @@ class Person
   def own(thing)
     thing.owner(@name)
   end
+
+  # place classであることを期待
+
+  # def at
+  #   @at.name
+  # end
 end
